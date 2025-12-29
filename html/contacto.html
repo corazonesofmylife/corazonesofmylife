@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contacta con Corazones of My Life. Formulario de contacto, ubicación y enlaces a nuestras redes sociales">
+    <title>Contacto - Corazones of My Life</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Header y Navegación -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Corazones of My Life</h1>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="contacto.html" class="active">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="main">
+        <!-- Sección de Contacto -->
+        <section class="content-section">
+            <div class="container">
+                <h2 class="page-title">Contáctanos</h2>
+                <p class="intro-text">
+                    Estamos aquí para responder todas tus preguntas y ayudarte a conocer más sobre nuestros servicios.
+                    No dudes en ponerte en contacto con nosotros.
+                </p>
+            </div>
+        </section>
+
+        <!-- Formulario y Información -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <!-- Formulario de Contacto -->
+                    <div class="contact-form-container">
+                        <h3>Envíanos un Mensaje</h3>
+                        <form class="contact-form" action="#" method="POST">
+                            <div class="form-group">
+                                <label for="nombre">Nombre Completo *</label>
+                                <input type="text" id="nombre" name="nombre" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Correo Electrónico *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telefono">Teléfono</label>
+                                <input type="tel" id="telefono" name="telefono">
+                            </div>
+                            <div class="form-group">
+                                <label for="asunto">Asunto *</label>
+                                <input type="text" id="asunto" name="asunto" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="mensaje">Mensaje *</label>
+                                <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                        </form>
+                    </div>
+
+                    <!-- Información de Contacto -->
+                    <div class="contact-info-container">
+                        <h3>Información de Contacto</h3>
+                        <div class="contact-info">
+                            <div class="info-item">
+                                <span class="info-icon">📞</span>
+                                <div>
+                                    <h4>Teléfono</h4>
+                                    <p>(123) 456-7890</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-icon">✉️</span>
+                                <div>
+                                    <h4>Email</h4>
+                                    <p>info@corazonesofmylife.com</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-icon">📍</span>
+                                <div>
+                                    <h4>Dirección</h4>
+                                    <p>Calle Principal 123<br>Ciudad, Estado 12345</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-icon">🕒</span>
+                                <div>
+                                    <h4>Horario de Atención</h4>
+                                    <p>Lunes a Viernes: 9:00 AM - 6:00 PM<br>Sábados: 9:00 AM - 2:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Botón WhatsApp -->
+                        <div class="whatsapp-button">
+                            <a href="https://wa.me/1234567890" class="btn btn-whatsapp" target="_blank" rel="noopener">
+                                💬 Contáctanos por WhatsApp
+                            </a>
+                        </div>
+
+                        <!-- Redes Sociales -->
+                        <div class="social-media">
+                            <h4>Síguenos en Redes Sociales</h4>
+                            <div class="social-links">
+                                <a href="#" class="social-link" target="_blank" rel="noopener" aria-label="Facebook">
+                                    📘 Facebook
+                                </a>
+                                <a href="#" class="social-link" target="_blank" rel="noopener" aria-label="Instagram">
+                                    📷 Instagram
+                                </a>
+                                <a href="#" class="social-link" target="_blank" rel="noopener" aria-label="YouTube">
+                                    ▶️ YouTube
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mapa -->
+        <section class="map-section">
+            <div class="container">
+                <h3 class="section-title">Nuestra Ubicación</h3>
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.1234567890123!2d-99.12345678901234!3d19.432608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDI1JzU3LjQiTiA5OcKwMDcnMjQuNCJX!5e0!3m2!1ses!2smx!4v1234567890123!5m2!1ses!2smx"
+                        width="100%"
+                        height="450"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Ubicación de Corazones of My Life">
+                    </iframe>
+                    <p class="map-note">
+                        <em>Nota: Actualiza la URL del mapa con la ubicación real de la casa hogar</em>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Corazones of My Life</h3>
+                    <p>Casa hogar dedicada al cuidado integral de adultos mayores</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p>Teléfono: (123) 456-7890</p>
+                    <p>Email: info@corazonesofmylife.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Corazones of My Life. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
