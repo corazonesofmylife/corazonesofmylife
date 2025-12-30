@@ -1,0 +1,281 @@
+/* ============================================
+   QUIENES.CSS - DISEÑO FINAL CORREGIDO
+   ============================================ */
+
+:root {
+    --primary: #0a192f;
+    /* Azul Marino Profundo */
+    --accent: #ff8a42;
+    /* Naranja Vibrante */
+    --accent-hover: #e67e22;
+    --white: #ffffff;
+    --bg-light: #fafbfc;
+}
+
+/* --- CLASES DE UTILIDAD --- */
+.text-orange {
+    color: var(--accent) !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.section-padding {
+    padding: 100px 0;
+}
+
+/* --- TÍTULO PRINCIPAL (DOS COLORES) --- */
+.main-title {
+    font-size: 3.5rem;
+    color: var(--primary);
+    font-family: var(--font-title);
+    font-weight: 800;
+    margin-bottom: 60px;
+    display: inline-block;
+}
+
+/* --- 1. SECCIÓN VALORES (PRIMERA SECCIÓN) --- */
+.values-section {
+    padding-top: 180px;
+    background: var(--white);
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.value-card {
+    background: var(--white);
+    padding: 45px 35px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+    border: 1px solid #f0f0f0;
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent);
+}
+
+.icon-circle {
+    width: 85px;
+    height: 85px;
+    background: rgba(255, 138, 66, 0.1);
+    color: var(--accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    margin: 0 auto 25px;
+}
+
+/* --- 2. SECCIÓN FAMILIA (VIDEO TOTALMENTE AJUSTADO) --- */
+.familia-hero {
+    background: var(--bg-light);
+}
+
+.familia-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.familia-text h1 {
+    font-size: 4rem;
+    color: var(--primary);
+    font-family: var(--font-title);
+    margin-bottom: 20px;
+}
+
+.divider {
+    width: 100px;
+    height: 6px;
+    background: var(--accent);
+    margin: 25px 0;
+    border-radius: 3px;
+}
+
+/* Contenedor de la columna del video para centrar el botón */
+.familia-video-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Video Frame corregido para que el video no salga en una esquina */
+.video-frame {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    /* Relación 16:9 */
+    height: 0;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(10, 25, 47, 0.3);
+    background: #000;
+}
+
+/* Forzar al iframe a ocupar el 100% del contenedor negro */
+.video-frame iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    border: none;
+}
+
+/* BOTÓN NARANJA PALPITANTE */
+.video-actions {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-play-video-alt {
+    background: var(--accent);
+    color: var(--white);
+    border: none;
+    padding: 18px 45px;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+}
+
+.pulse-orange {
+    animation: pulse-animation 2s infinite;
+}
+
+@keyframes pulse-animation {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(255, 138, 66, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 20px rgba(255, 138, 66, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(255, 138, 66, 0);
+    }
+}
+
+.btn-play-video-alt:hover {
+    background: var(--accent-hover);
+    transform: scale(1.05);
+    animation: none;
+}
+
+/* --- 3. MISIÓN Y VISIÓN --- */
+.mv-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.interactive-card {
+    padding: 60px;
+    border-radius: 35px;
+    background: var(--white);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+    transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.secondary-card {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.secondary-card h2 {
+    color: var(--white) !important;
+}
+
+.interactive-card:hover {
+    transform: translateY(-12px);
+}
+
+.interactive-card:not(.secondary-card):hover {
+    box-shadow: 0 30px 60px rgba(255, 138, 66, 0.15);
+}
+
+.secondary-card:hover {
+    box-shadow: 0 35px 70px rgba(10, 25, 47, 0.45);
+}
+
+.mv-icon-bg {
+    color: var(--accent);
+    font-size: 3.5rem;
+    margin-bottom: 25px;
+}
+
+/* --- BOTÓN WHATSAPP FLOTANTE --- */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-weight: 700;
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    padding: 15px 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    background-color: #128c7e;
+    transform: scale(1.05) translateY(-5px);
+    color: #FFF;
+}
+
+.whatsapp-float i {
+    font-size: 1.6rem;
+    margin-right: 10px;
+}
+
+/* --- RESPONSIVO --- */
+@media (max-width: 992px) {
+
+    .familia-grid,
+    .values-grid,
+    .mv-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .familia-text h1,
+    .main-title {
+        font-size: 2.8rem;
+    }
+
+    .divider {
+        margin: 25px auto;
+    }
+
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+        padding: 12px 20px;
+    }
+}

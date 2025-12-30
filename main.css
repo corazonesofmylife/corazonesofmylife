@@ -1,0 +1,219 @@
+/* ============================================
+   MAIN.CSS - ESTILOS DE CONTENIDO Y HERO
+   ============================================ */
+
+/* --- CONFIGURACIÓN DEL HERO --- */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    background-color: #0A192F;
+    /* Fondo de seguridad azul oscuro */
+    overflow: hidden;
+}
+
+/* Contenedor del Canvas (Donde PixiJS dibuja el agua) */
+#water-canvas-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    /* Capa base */
+}
+
+/* Capa de sombreado para que el texto resalte sobre la imagen */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Gradiente suave: ajusta el 0.3 y 0.6 para ver más o menos la foto */
+    background: linear-gradient(rgba(10, 25, 47, 0.3),
+            rgba(10, 25, 47, 0.6));
+    z-index: 2;
+    /* Por encima del agua, debajo de las letras */
+    pointer-events: none;
+    /* Permite que el mouse "atraviese" esta capa hacia el agua */
+}
+
+/* Contenedor de las letras y botones */
+.hero-container {
+    position: relative;
+    z-index: 3;
+    /* Arriba de todo */
+    max-width: 900px;
+    padding: 0 20px;
+}
+
+.hero-title {
+    font-family: var(--font-title);
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.hero-title span {
+    color: var(--accent);
+    /* Color Naranja Coral */
+}
+
+.hero-text {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    opacity: 0.9;
+}
+
+/* --- SECCIÓN MISIÓN --- */
+.mission-section {
+    padding: 100px 0;
+    background-color: var(--white);
+    text-align: center;
+}
+
+.section-title {
+    font-family: var(--font-title);
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 40px;
+}
+
+.mission-card {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background: #fdfdfd;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.mission-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* --- SECCIÓN VALORES --- */
+.values-preview {
+    padding: 100px 0;
+    background-color: #f8f9fa;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.value-card {
+    background: var(--white);
+    padding: 50px 40px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.value-icon-box {
+    width: 70px;
+    height: 70px;
+    background: rgba(255, 140, 66, 0.1);
+    color: var(--accent);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin: 0 auto 25px;
+}
+
+.value-card h3 {
+    font-family: var(--font-title);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--primary);
+}
+
+.value-card p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* --- SECCIÓN CTA --- */
+.cta-section {
+    padding: 100px 0;
+    background-color: var(--white);
+}
+
+.cta-box {
+    background-color: var(--primary);
+    border-radius: 30px;
+    padding: 60px 40px;
+    text-align: center;
+    color: var(--white);
+    box-shadow: 0 20px 50px rgba(10, 25, 47, 0.2);
+}
+
+.cta-title {
+    font-family: var(--font-title);
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+/* --- BOTONES --- */
+.btn-primary {
+    background-color: var(--accent);
+    color: var(--white);
+    padding: 18px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #e67e22;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 140, 66, 0.4);
+}
+
+/* --- ANIMACIONES --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+}

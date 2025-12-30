@@ -1,0 +1,266 @@
+/* ============================================
+   CONTACTO.CSS - ARMONÍA Y DISEÑO PROFESIONAL
+   ============================================ */
+
+:root {
+    --primary-dark: #0a192f;
+    /* Azul Marino Profundo */
+    --accent-orange: #ff8a42;
+    /* Naranja Vibrante */
+    --bg-light: #fafbfc;
+    /* Fondo suave */
+    --white: #ffffff;
+    --text-main: #333333;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-main);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.text-orange {
+    color: var(--accent-orange) !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+/* --- HERO / TÍTULO --- */
+.contacto-hero {
+    padding-top: 150px;
+    background: var(--white);
+}
+
+.main-title {
+    font-size: 3.5rem;
+    color: var(--primary-dark);
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.divider.central {
+    width: 80px;
+    height: 4px;
+    background: var(--accent-orange);
+    margin: 20px auto 0;
+    border-radius: 2px;
+}
+
+/* --- GRID DE CONTACTO --- */
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+/* --- FORMULARIO (ESTILO LIMPIO) --- */
+.contact-form-container {
+    background: var(--white);
+    padding: 50px;
+    border-radius: 30px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+}
+
+.contact-form-container h3 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--primary-dark);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #f0f0f0;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    /* Asegura que no se desborde */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--accent-orange);
+    outline: none;
+    background: #fffcf9;
+}
+
+.btn-submit {
+    background: var(--accent-orange);
+    color: white;
+    border: none;
+    padding: 16px 35px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background: #e67e22;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(230, 126, 34, 0.2);
+}
+
+/* --- INFO LATERAL (AZUL MARINO) --- */
+.contact-info-container {
+    background: var(--primary-dark);
+    color: var(--white);
+    padding: 50px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info-item {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.info-icon {
+    font-size: 1.6rem;
+    color: var(--accent-orange);
+    margin-top: 5px;
+}
+
+.info-item h4 {
+    margin: 0 0 5px 0;
+    color: var(--accent-orange);
+    font-size: 1.2rem;
+}
+
+.info-item p {
+    margin: 0;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+/* --- REDES SOCIALES (DENTRO DEL CUADRO AZUL) --- */
+.social-box h4 {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 25px;
+    margin-top: 20px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-links a {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 1.2rem;
+}
+
+.social-links a:hover {
+    background: var(--accent-orange);
+    transform: scale(1.1);
+}
+
+/* --- MAPA --- */
+.section-subtitle {
+    font-size: 2.2rem;
+    color: var(--primary-dark);
+    margin-bottom: 40px;
+}
+
+.map-container {
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    line-height: 0;
+    /* Evita espacios extraños bajo el iframe */
+}
+
+/* --- BOTÓN WHATSAPP FLOTANTE --- */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-weight: 700;
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    padding: 15px 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    background-color: #128c7e;
+    transform: scale(1.05) translateY(-5px);
+    color: #FFF;
+}
+
+.whatsapp-float i {
+    font-size: 1.6rem;
+    margin-right: 10px;
+}
+
+/* --- RESPONSIVO --- */
+@media (max-width: 992px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info-container {
+        order: -1;
+        /* Muestra la info antes que el formulario en móviles */
+    }
+}
+
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2.5rem;
+    }
+
+    .contact-form-container,
+    .contact-info-container {
+        padding: 30px;
+    }
+}
